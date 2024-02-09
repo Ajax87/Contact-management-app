@@ -8,15 +8,15 @@ const {
 } = require("../controller/Contact-Controller");
 const router = express.Router();
 
-router.route("/").post(createContact);
+router.post("/", createContact);
 
-router.route("/").get(getContacts);
+router.get("/", getContacts);
 
-router.route("/:id").get(getContact);
+router.get("/:id", getContact);
 
-router.route("/:id").put(updateContact);
+router.put("/:id", updateContact);
 
-router.route("/:id").delete(deleteContact);
+router.delete("/:id", deleteContact);
 
 //Optimization if we want
 // router.route("/").post(createContact).get(getContacts);
